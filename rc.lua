@@ -156,7 +156,7 @@ mpdwidget = lain.widgets.mpd({
             title  = ""
             mpdicon:set_image(nil)
         end
-        widget:set_markup(markup("#e54c62", artist) .. markup("#b2b2b2", title))
+        widget:set_markup(markup(hackergreen, artist) .. markup(hackergrey, title))
     end
 })
 
