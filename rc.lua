@@ -10,6 +10,8 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
+-- Require lain
+local lain = require("lain")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -52,6 +54,7 @@ editor_cmd = terminal .. " -e " .. editor
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
+altkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 local layouts =
@@ -81,10 +84,12 @@ end
 
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
-tags = {}
+tags = {
+   names = { " WEB ", " DEV ", " MAIL ", " FILE ", " DOC ", " MEDIA " },
+   layout = { layouts[1], layouts[2], layouts[3], layouts[4], layouts[5], layouts[6] }
+}
 for s = 1, screen.count() do
-    -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "web", "dev", "mail", "file", "doc", "media" }, s, layouts[l])
+   tags[s] = awful.tag(tags.names, s, tags.layout)
 end
 -- }}}
 
