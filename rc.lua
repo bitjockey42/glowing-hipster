@@ -115,13 +115,15 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 markup = lain.util.markup
 widgetspacer = "   "
 hackergreen = "#76EE00"
+hackergrey = "#AAAAAA"
 
 -- Create a textclock widget
 clockicon = " "
 clocktext = "%I:%M %p"
-mytextclock = awful.widget.textclock(markup(hackergreen, clockicon) .. markup("#aaaaaa", clocktext) .. widgetspacer)
+mytextclock = awful.widget.textclock(widgetspacer .. markup(hackergreen, clockicon) .. markup(hackergrey, clocktext) .. widgetspacer)
 
 -- Battery
+batteryicon = " "
 batterywidget = lain.widgets.bat({
       settings = function ()
          if bat_now.perc == "N/A" then
@@ -129,7 +131,7 @@ batterywidget = lain.widgets.bat({
          else
             bat_now.perc = bat_now.perc .. "% "
          end
-         widget:set_text(widgetspacer .. " " .. bat_now.perc .. widgetspacer)
+         widget:set_markup(widgetspacer .. markup(hackergreen, batteryicon) .. markup(hackergrey, bat_now.perc) .. widgetspacer)
       end
 })
 
