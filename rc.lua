@@ -161,12 +161,13 @@ mpdwidget = lain.widgets.mpd({
 })
 
 -- ALSA volume
+volumeicon = " "
 volumewidget = lain.widgets.alsa({
     settings = function()
         if volume_now.status == "off" then
             volume_now.level = volume_now.level .. "M"
         end
-        widget:set_markup(markup("#7493d2", widgetspacer .. "  " .. volume_now.level .. "% "))
+        widget:set_markup(markup(hackergreen, volumeicon) .. markup(hackergrey, volume_now.level .. " %"))
     end
 })
 
