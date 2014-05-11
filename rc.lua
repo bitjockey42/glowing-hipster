@@ -3,14 +3,10 @@ local gears = require("gears")
 local awful = require("awful")
 awful.rules = require("awful.rules")
 require("awful.autofocus")
--- Widget and layout library
 local wibox = require("wibox")
--- Theme handling library
 local beautiful = require("beautiful")
--- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
--- Require lain
 local lain = require("lain")
 
 -- {{{ Error handling
@@ -60,7 +56,7 @@ altkey = "Mod1"
 local layouts =
 {
     awful.layout.suit.floating,
-    awful.layout.suit.tile,
+    lain.layout.uselesstile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
