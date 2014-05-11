@@ -81,7 +81,7 @@ end
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-   names = { " WEB ", " DEV ", " MAIL ", " FILE ", " DOC ", " MEDIA " },
+   names = { "  ", "  ", "  ", "  ", "  ", "  " },
    layout = { layouts[1], layouts[2], layouts[3], layouts[4], layouts[5], layouts[6] }
 }
 for s = 1, screen.count() do
