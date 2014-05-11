@@ -111,10 +111,12 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- {{{ Wibox
+-- Initialize the markup utility
+markup = lain.util.markup
+
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
-
-
+clockformat = "%I:%M %p"
+mytextclock = awful.widget.textclock(markup("#7788af", clockformat))
 
 -- Battery
 batterywidget = lain.widgets.bat({
@@ -200,7 +202,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
-    left_layout:add(mylauncher)
+    -- left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
