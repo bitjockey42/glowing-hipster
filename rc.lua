@@ -116,8 +116,8 @@ markup = lain.util.markup
 widgetspacer = "   "
 
 -- Create a textclock widget
-clockformat = " %I:%M %p "
-mytextclock = awful.widget.textclock(markup("#7788af", clockformat))
+clockformat = " %I:%M %p"
+mytextclock = awful.widget.textclock(markup("#7788af", clockformat) .. widgetspacer)
 
 -- Battery
 batterywidget = lain.widgets.bat({
@@ -127,7 +127,7 @@ batterywidget = lain.widgets.bat({
          else
             bat_now.perc = bat_now.perc .. "% "
          end
-         widget:set_text("  " .. bat_now.perc .. widgetspacer)
+         widget:set_text(" " .. bat_now.perc .. widgetspacer)
       end
 })
 
