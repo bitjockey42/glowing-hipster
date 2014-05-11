@@ -81,7 +81,7 @@ end
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-   names = { "  ", "  ", "  ", "  ", "  ", "  " },
+   names = { "   ", "  ", "  ", "  ", "  ", "  " },
    layout = { layouts[1], layouts[2], layouts[3], layouts[4], layouts[5], layouts[6] }
 }
 for s = 1, screen.count() do
@@ -113,9 +113,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- {{{ Wibox
 -- Initialize the markup utility
 markup = lain.util.markup
+widgetspacer = "   "
 
 -- Create a textclock widget
-clockformat = "%I:%M %p"
+clockformat = " %I:%M %p "
 mytextclock = awful.widget.textclock(markup("#7788af", clockformat))
 
 -- Battery
@@ -126,7 +127,7 @@ batterywidget = lain.widgets.bat({
          else
             bat_now.perc = bat_now.perc .. "% "
          end
-         widget:set_text(bat_now.perc)
+         widget:set_text("  " .. bat_now.perc .. widgetspacer)
       end
 })
 
