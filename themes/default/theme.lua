@@ -20,7 +20,7 @@ theme.fg_minimize   = "#ffffff"
 
 theme.border_width  = 2
 theme.border_normal = "#000000"
-theme.border_focus  = "#CC9393"
+theme.border_focus  = "#82B600"
 theme.border_marked = "#91231c"
 
 -- Disable taskbar icons
