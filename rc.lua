@@ -115,7 +115,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 markup = lain.util.markup
 widgetspacer = "   "
 hackergreen = "#76EE00"
-hackergrey = "#AAAAAA"
+hackergrey = "#00CC00"
 
 -- Create a textclock widget
 clockicon = " "
