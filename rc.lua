@@ -171,6 +171,17 @@ volumewidget = lain.widgets.alsa({
     end
 })
 
+-- Network
+netupicon = " "
+netdownicon = " "
+netwidget = lain.widgets.net({
+   settings = function()
+       widget:set_markup(markup(hackergreen, netupicon) .. markup(hackergrey, net_now.sent) .. widgetspacer .. markup(hackergreen, netdownicon) .. markup(hackergrey, net_now.received) .. widgetspacer)
+   end
+})
+
+
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -250,6 +261,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(netwidget)
     right_layout:add(volumewidget)
     right_layout:add(batterywidget)
     right_layout:add(mytextclock)
