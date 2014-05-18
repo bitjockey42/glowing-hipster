@@ -9,8 +9,8 @@ What you need
 ================
 
   - [Awesome WM](http://awesome.naquadah.org/): the awesome window manager, awesome.
-  - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) [AUR](https://aur.archlinux.org/packages/ttf-font-awesome/): the font used for the icons in the taglist and widgets
-  - [Dosis Font](http://www.fontsquirrel.com/fonts/dosis) [AUR](https://aur.archlinux.org/packages/ttf-google-fonts-git/): the font used for the rest of the theme
+  - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) [[AUR](https://aur.archlinux.org/packages/ttf-font-awesome/): the font used for the icons in the taglist and widgets
+  - [Dosis Font](http://www.fontsquirrel.com/fonts/dosis) [[AUR]](https://aur.archlinux.org/packages/ttf-google-fonts-git/): the font used for the rest of the theme
 
 Installing the config and theme
 ================================
