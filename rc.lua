@@ -180,7 +180,21 @@ netwidget = lain.widgets.net({
    end
 })
 
+-- Memory
+memicon = " "
+memwidget = lain.widgets.mem({
+    settings = function()
+        widget:set_markup(markup(hackergreen, memicon) .. markup(hackergrey, mem_now.used .. "M") .. widgetspacer)
+    end
+})
 
+-- CPU
+cpuicon = " "
+cpuwidget = lain.widgets.cpu({
+    settings = function()
+        widget:set_markup(markup(hackergreen, cpuicon) .. markup(hackergrey, cpu_now.usage .. " %") .. widgetspacer)
+    end
+})
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -261,6 +275,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(cpuwidget)
+    right_layout:add(memwidget)
     right_layout:add(netwidget)
     right_layout:add(volumewidget)
     right_layout:add(batterywidget)
